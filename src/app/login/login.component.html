@@ -1,1 +1,14 @@
-<p>login works!</p>
+
+<form class="login-section" #form="ngForm" (submit)="submitForm(form)" novalidate>
+    <mat-form-field>
+        <mat-label> User Name</mat-label>
+        <input matInput name="userName" ngModel #userName="ngModel" type="text" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label> password</mat-label>
+        <input matInput name="password" ngModel #password="ngModel" type="password"/>
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" color="primary"> Login </button>
+</form>
